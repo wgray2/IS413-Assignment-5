@@ -1,0 +1,27 @@
+﻿<!--
+    Wyatt Gray - Section 1 - Assignment 5
+    This program creates a database for a book store and outputs data in the database onto the index page.
+    -->
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model IQueryable<Book>
+<header class="text-center">
+    <h1 class="display-4">Book List</h1>
+</header>
+
+@foreach (var x in Model)
+{
+    <!--Display the database information-->
+<div class="text-center">
+    <h4 class="display-1">Title: @x.Title</h4>
+    <p>Author: @x.Author</p>
+    <p>Publisher: @x.Publisher</p>
+    <p>ISBN: @x.ISBN</p>
+    <p>Classification: @x.Classification</p>
+    <p>Category: @x.Category</p>
+    <p>Price: @x.Price</p>
+</div>
+}
