@@ -18,5 +18,6 @@ namespace IS413_Assignment_5.Models
         public string Category { get; set; }
         [DataType(DataType.Currency)]
         public float Price { get; set; }
+        public int NumPages { get; set; }
     }
 }

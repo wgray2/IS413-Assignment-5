@@ -32,6 +32,9 @@ namespace IS413_Assignment_5.Migrations
                     b.Property<string>("Classification")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("NumPages")
+                        .HasColumnType("int");
+
                     b.Property<float>("Price")
                         .HasColumnType("real");
 

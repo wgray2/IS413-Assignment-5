@@ -16,7 +16,8 @@ namespace IS413_Assignment_5.Migrations
                     Publisher = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Classification = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Category = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Price = table.Column<float>(type: "real", nullable: false)
+                    Price = table.Column<float>(type: "real", nullable: false),
+                    NumPages = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {

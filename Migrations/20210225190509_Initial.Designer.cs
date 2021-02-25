@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace IS413_Assignment_5.Migrations
 {
     [DbContext(typeof(StoreDbContext))]
-    [Migration("20210217222842_Initial")]
+    [Migration("20210225190509_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -33,6 +33,9 @@ namespace IS413_Assignment_5.Migrations
 
                     b.Property<string>("Classification")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("NumPages")
+                        .HasColumnType("int");
 
                     b.Property<float>("Price")
                         .HasColumnType("real");
