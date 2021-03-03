@@ -28,7 +28,7 @@ namespace IS413_Assignment_5
             services.AddControllersWithViews();
             services.AddDbContext<StoreDbContext>(options =>
             {
-                options.UseSqlServer(Configuration["ConnectionStrings:BookStoreConnection"]);
+                options.UseSqlite(Configuration["ConnectionStrings:BookStoreConnection"]);
             });
 
             services.AddScoped<IStoreRepository, EFStoreRepository>();
@@ -56,6 +56,18 @@ namespace IS413_Assignment_5
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllerRoute("catpage",
+                    "{category}/{page:int}",
+                    new { Controller = "Home", action = "Index" });
+
+                endpoints.MapControllerRoute("page",
+                    "{page:int}",
+                    new { Controller = "Home", action = "Index" });
+
+                endpoints.MapControllerRoute("category",
+                    "{category}",
+                    new { Controller = "Home", action = "Index", page = 1 });
+
                 endpoints.MapControllerRoute(
                     "paginstion",
                     "P{page}", 

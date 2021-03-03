@@ -10,5 +10,6 @@ namespace IS413_Assignment_5.Models.ViewModels
     {
         public IEnumerable<Book> Books { get; set; }
         public PagingInfo PagingInfo { get; set; }
+        public string Category { get; set; }
     }
 }
